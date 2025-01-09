@@ -6,7 +6,7 @@ from src.datasplit import Split
 split = Split()
 models = Model()
 
-x_train, x_test, y_train, y_test = split.splitter()
+x_train, x_test, y_train, y_test = split.spiltter()
 grid = models.model()
 
 print('Starting Training')

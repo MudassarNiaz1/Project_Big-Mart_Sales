@@ -9,14 +9,13 @@ class Cleaner:
     def __init__(self):
         pass
 
-    def clean(df = df):
-        print(df.shape)
+    def clean(self,df = df):
         x = df.drop('Item_Outlet_Sales', axis = 1)
         y=df['Item_Outlet_Sales']
         df = df.drop_duplicates()
-        df = df.drop.na()
+        df = df.dropna()
         print(df.shape)
-        return df 
+        
         x.drop(['Item_Identifier', 'Outlet_Identifier'], axis=1, inplace=True)
         return x,y
 

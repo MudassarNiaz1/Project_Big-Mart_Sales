@@ -3,7 +3,7 @@ from sklearn.model_selection import train_test_split
 from .datatransform import Transform
 
 trans = Transform()
-x, y = trans.transformer()
+x, y  = trans.transformer()
 
 class Split:
     def __init__(self):

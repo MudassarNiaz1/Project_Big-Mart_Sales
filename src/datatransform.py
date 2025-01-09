@@ -12,8 +12,8 @@ class Transform:
     def transformer(self):
         categorical = x.select_dtypes("object").columns.to_list()
         numeric = x.select_dtypes("number").columns.to_list()
-        x['Item_Weight'].fillna(x['Item_Weight'].mean(), inplace = True)
-        x['Outlet_Size'].fillna(x['Outlet_Size'].mode()[0], inplace = True)
+        x['Item_Weight'] = x['Item_Weight'].fillna(x['Item_Weight'].mean())
+        x['Outlet_Size'] = x['Outlet_Size'].fillna(x['Outlet_Size'].mode()[0])
         scaler = StandardScaler()
         scaler.fit(x[numeric])
         x[numeric] = scaler.transform(x[numeric])
