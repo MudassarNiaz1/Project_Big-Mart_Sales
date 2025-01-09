@@ -11,7 +11,7 @@ class Cleaner:
 
     def clean(self,df = df):
         x = df.drop('Item_Outlet_Sales', axis = 1)
-        y=df['Item_Outlet_Sales']
+        y = df['Item_Outlet_Sales']
         df = df.drop_duplicates()
         df = df.dropna()
         print(df.shape)
